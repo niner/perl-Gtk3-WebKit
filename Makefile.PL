@@ -3,7 +3,6 @@ use warnings;
 
 use ExtUtils::MakeMaker;
 
-use Test::NeedsDisplay;
 use File::Spec;
 use Data::Dumper;
 
@@ -22,6 +21,9 @@ sub main {
 			'Gtk3'                        => 0,
 		},
 		PREREQ_FATAL  => 1,
+		TEST_REQUIRES => {
+			'Test::NeedsDisplay'          => 0,
+		},
 
 		META_MERGE => {
 			resources => {
